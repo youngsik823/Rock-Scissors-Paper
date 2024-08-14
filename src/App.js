@@ -24,7 +24,7 @@ function App() {
     const [result, setResult] = useState("");
     const play = (userChoice) => {
         setUserSelect(choice[userChoice]);
-        let computerChoice = randomChoice();
+        const computerChoice = randomChoice();
         setComputerSelect(computerChoice);
         setResult(judgement(choice[userChoice], computerChoice));
     };
@@ -41,9 +41,9 @@ function App() {
     };
 
     const randomChoice = () => {
-        let itemArray = Object.keys(choice);
-        let randomItem = Math.floor(Math.random() * itemArray.length);
-        let final = itemArray[randomItem];
+        const itemArray = Object.keys(choice);
+        const randomItem = Math.floor(Math.random() * itemArray.length);
+        const final = itemArray[randomItem];
         return choice[final];
     };
     return (
